@@ -29,8 +29,13 @@
   line-height: 2.25rem;
 }
 
-.socialProofTitle {
+.socialProofContentWrapper {
   margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.socialProofTitle {
   color: var(--dark-purple);
   text-align: center;
   font-family: Fraunces;
@@ -53,4 +58,67 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.75rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .socialProofWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 35rem;
+  }
+
+  .socialProofContentWrapper {
+    margin-top: 0;
+  }
+
+  .socialProofTitle {
+    text-align: left;
+  }
+
+  .socialProofDescriptionWrapper {
+    margin-top: 1rem;
+    width: 30rem;
+  }
+
+  .socialProofDescription {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .socialProofWrapper {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 22rem;
+  }
+
+  .socialProofNumber {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .socialProofContentWrapper {
+    margin-top: 3.5rem;
+  }
+
+  .socialProofTitle {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .socialProofDescriptionWrapper {
+    margin-top: 1.75rem;
+    width: 22.125rem;
+  }
+
+  .socialProofDescription {
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
 }

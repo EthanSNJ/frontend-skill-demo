@@ -4,6 +4,7 @@
   --eucalyptus: #44ffa1;
   --dark-purple: #24053e;
   --white: #ffffff;
+  overflow-x: hidden;
 }
 
 .purpleBackground {
@@ -19,11 +20,23 @@
 .ghostWhiteBackground {
   background: var(--ghost-white);
   width: 100%;
-  height: 58rem;
+  height: 60rem;
   position: absolute;
   z-index: 0;
   border-radius: 0 0 100vw 100vw / 0 0 calc(100vw / 2) calc(100vw / 2);
   transform: scale(2);
+}
+
+.bgPattern1 {
+  display: none;
+}
+
+.bgPattern2 {
+  display: none;
+}
+
+.bgPattern3 {
+  display: none;
 }
 
 .wrapper {
@@ -61,6 +74,11 @@
   text-decoration: underline solid var(--eucalyptus) 0.1875rem;
 }
 
+.header2:hover {
+  cursor: pointer;
+  color: var(--eucalyptus)
+}
+
 .title {
   margin: 4rem auto 0 auto;
   width: 21.4375rem;
@@ -95,13 +113,19 @@
   letter-spacing: -0.01rem;
 }
 
+.learnMoreButton:hover {
+  cursor: pointer;
+  background: transparent;
+  color: var(--eucalyptus);
+  border: 2px solid var(--eucalyptus)
+}
+
 .iphoneWrapper {
   display: block;
-  width: 19.86963rem;
-  height: 11.05669rem;
+  width: 20rem;
   height: auto;
   flex-shrink: 0;
-  margin: 4rem auto 1.5rem auto;
+  margin: 4rem auto 0 auto;
 }
 
 .iphone {
@@ -109,12 +133,27 @@
   height: 100%;
 }
 
+.socialProofList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.founderWrapper {
+  position: relative;
+  margin: 10.75rem auto 0 auto;
+  height: 37.6875rem;
+  display: flex;
+  align-items: flex-end;
+}
+
 .founder {
-  margin-top: 10.75rem;
   width: 16.5625rem;
   height: 16.6875rem;
   flex-shrink: 0;
   position: absolute;
+  top: 0%;
   left: 50%;
   right: 50%;
   transform: translateX(-50%);
@@ -123,15 +162,17 @@
 
 .founderSpeech {
   position: relative;
-  margin: 24.5rem auto 0 auto;
   width: 100%;
+  height: 23.4375rem;
   flex-shrink: 0;
   padding: 2rem;
   background: var(--dark-purple);
   z-index: 2;
+  margin-bottom: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .founderSpeech h2 {
@@ -169,10 +210,18 @@
   font-weight: 700;
   line-height: 2rem;
   letter-spacing: -0.01rem;
+  border: none;
+}
+
+.applyButton:hover {
+  cursor: pointer;
+  background: transparent;
+  color: var(--eucalyptus);
+  border: 2px solid var(--eucalyptus)
 }
 
 .footer {
-  margin: 4.63rem auto 4rem auto;
+  margin: 4.63rem auto 3rem auto;
   width: 7.25rem;
   height: 6.389rem;
   display: flex;
@@ -189,4 +238,198 @@
 }
 
 @media screen and (min-width: 48rem) {
+  .wrapper {
+    padding: 2.5rem;
+  }
+
+  .purpleBackground {
+    height: 23rem;
+  }
+
+  .ghostWhiteBackground {
+    height: 56rem;
+  }
+
+  .bgPattern1 {
+    display: block;
+    position: absolute;
+    top: 6rem;
+    left: -14rem;
+    width: auto;
+    height: 20rem;
+    z-index: 1;
+  }
+
+  .bgPattern2 {
+    display: block;
+    position: absolute;
+    top: 16rem;
+    right: -6rem;
+    height: 12rem;
+    z-index: 1;
+  }
+
+  .bgPattern3 {
+    display: block;
+    position: absolute;
+    top: 18rem;
+    right: 2rem;
+    height: 10rem;
+    z-index: 1;
+  }
+
+  .title {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+    width: 30rem;
+  }
+
+  .iphoneWrapper {
+    width: 30rem;
+  }
+
+  .socialProofList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .founderWrapper {
+    margin-top: 12.75rem;
+    height: 32.875rem;
+    width: 43.875rem;
+  }
+
+  .founder {
+    left: 2rem;
+    right: revert;
+    transform: revert;
+  }
+
+  .founderSpeech {
+    margin: 0 0 0 auto;
+    width: 32.125rem;
+    padding: 3rem 3.5rem 3.5rem 3.5rem;
+    align-items: start;
+  }
+
+  .founderSpeech h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .founderSpeech span {
+    text-align: start;
+  }
+
+  .footer {
+    margin: 5rem auto 5rem auto;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .wrapper {
+    padding: 3.5rem 10.3rem;
+  }
+
+  .purpleBackground {
+    height: 32rem;
+  }
+
+  .ghostWhiteBackground {
+    height: 63rem;
+  }
+
+  .bgPattern1 {
+    display: block;
+    position: absolute;
+    top: 10rem;
+    left: -10rem;
+    width: auto;
+    height: 23rem;
+    z-index: 1;
+  }
+
+  .bgPattern2 {
+    display: block;
+    position: absolute;
+    top: 21rem;
+    right: -3.3rem;
+    height: 12rem;
+    z-index: 1;
+  }
+
+  .bgPattern3 {
+    display: block;
+    position: absolute;
+    top: 15.7rem;
+    right: 4rem;
+    height: 10rem;
+    z-index: 1;
+  }
+
+  .header2 {
+    font-size: 1.125rem;
+  }
+
+  .title {
+    margin: 5.5rem auto 0 auto;
+    font-size: 5rem;
+    line-height: 5rem;
+    width: 39.6875rem;
+  }
+
+  .learnMoreButton {
+    width: 10.0625rem;
+    height: 3.8125rem;
+    font-size: 1.125rem;
+  }
+
+  .iphoneWrapper {
+    width: 45rem;
+  }
+
+  .socialProofList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4rem;
+  }
+
+  .founderWrapper {
+    margin-top: 17rem;
+    width: 69.5rem;
+    height: 40.48394rem;
+  }
+
+  .founder {
+    top: 4rem;
+    width: 28.14294rem;
+    height: 28.3125rem;
+  }
+
+  .founderSpeech {
+    width: 45.625rem;
+    padding: 4rem;
+    margin-bottom: 3.86rem;
+  }
+
+  .founderSpeech h2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  .founderSpeech span {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
+  .applyButton {
+    width: 11.875rem;
+    font-size: 1.125rem;
+  }
+
+  .footer {
+    margin: 3.75rem auto 3.38rem auto;
+  }
 }

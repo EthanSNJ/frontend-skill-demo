@@ -17,16 +17,18 @@ export const SocialProof = ({ number, title, description }: Props) => {
       >
         {number}
       </div>
-      <div
-        className="socialProofTitle"
-        style={{
-          fontVariationSettings: "'opsz' 144, 'wght' 600, 'SOFT' 0",
-        }}
-      >
-        {title}
-      </div>
-      <div className="socialProofDescriptionWrapper">
-        <div className="socialProofDescription">{description}</div>
+      <div className="socialProofContentWrapper">
+        <div
+          className="socialProofTitle"
+          style={{
+            fontVariationSettings: "'opsz' 144, 'wght' 600, 'SOFT' 0",
+          }}
+        >
+          {title}
+        </div>
+        <div className="socialProofDescriptionWrapper">
+          <div className="socialProofDescription">{description}</div>
+        </div>
       </div>
     </div>
   );
