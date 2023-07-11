@@ -34,25 +34,8 @@ const socialProofData = [
 export const WorkitLandingPage = () => {
   return (
     <div>
-      <img
-        src={BackgroundPurple}
-        alt="Background"
-        style={{
-          width: "100%",
-          position: "absolute",
-          zIndex: 1,
-        }}
-      />
-      <img
-        src={BackgroundGhostWhite}
-        alt="Background"
-        style={{
-          width: "100%",
-          height: "105rem",
-          position: "absolute",
-          zIndex: 0,
-        }}
-      />
+      <div className="purpleBackground"></div>
+      <div className="ghostWhiteBackground"></div>
       <div className="wrapper">
         <div className="headerWrapper">
           <img src={LogoLight} alt="Logo" className="header1" />

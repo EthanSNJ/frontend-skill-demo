@@ -25,7 +25,9 @@ export const SocialProof = ({ number, title, description }: Props) => {
       >
         {title}
       </div>
-      <div className="socialProofDescription">{description}</div>
+      <div className="socialProofDescriptionWrapper">
+        <div className="socialProofDescription">{description}</div>
+      </div>
     </div>
   );
 };

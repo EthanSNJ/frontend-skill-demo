@@ -40,8 +40,12 @@
   line-height: 2.25rem;
 }
 
+.socialProofDescriptionWrapper {
+  margin-top: 1rem;
+  width: 21.4375rem;
+}
+
 .socialProofDescription {
-    margin-top: 1rem;
   color: var(--davys-grey);
   text-align: center;
   font-family: Manrope;
